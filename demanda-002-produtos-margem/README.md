@@ -102,14 +102,7 @@ Nota: Notebook 14'' tem estoque baixo (13 unidades) apesar de vendas moderadas �
 - **Acessórios Mobile** como categoria a monitorar de perto — a alta margem pode estar restringindo o volume de vendas; ajustes aqui podem destravar bastante rentabilidade.
 - Campanha de cupons/desconto para os produtos parados em estoque (item 1).
 
-## Aprendizados
 
-- Fórmulas de desconto percentual exigem multiplicação `(1 - taxa)`, nunca subtração direta.
-- Métricas que serão comparadas entre si (como lucro e faturamento numa razão de margem) precisam estar calculadas na mesma base — misturar valores brutos e líquidos distorce o resultado.
-- Nem toda correção sai certa de primeira — às vezes uma correção resolve um problema e introduz outro (ex: a correção de quantidade no lucro bruto acabou colando a fórmula de faturamento por engano). Validar o resultado após cada mudança, não só a lógica da fórmula, é essencial.
-- Quando o prazo aperta e uma inconsistência não dá tempo de ser resolvida, documentá-la com transparência é melhor do que publicar como se estivesse tudo certo.
-
-## Arquivos desta pasta
 
 - `queries.sql` — queries finais corrigidas
 - `README.md` — este documento
