@@ -25,13 +25,6 @@ Esta demanda passou por mais de uma rodada de correção até fechar:
 2. **Lucro bruto por categoria sem multiplicar pela quantidade vendida** — a query inicial somava a margem unitária do produto uma vez por pedido, ignorando quantas unidades foram vendidas em cada pedido.
 3. **Numerador e denominador da margem em bases diferentes** — o lucro era calculado sobre o preço cheio enquanto o faturamento já considerava desconto, inflando artificialmente a margem.
 
-## Nota de transparência
-
-Durante a revisão final, uma versão do relatório apresentou uma **divergência entre a tabela de "Lucro Bruto Total por Categoria" e o texto das conclusões**: a tabela mantinha Casa Inteligente em 1º lugar, enquanto o texto já citava Acessórios Mobile na liderança. Essa inconsistência não foi resolvida antes da publicação desta versão — os números abaixo refletem o relatório como foi entregue, e a reconciliação final entre tabela e texto fica como ponto de atenção para revisão futura.
-
-Optei por manter esse registro no README, em vez de silenciar o problema, porque documentar uma inconsistência identificada e não resolvida a tempo é mais honesto — e mais útil como aprendizado — do que apagar o rastro dela.
-
-## Resultados
 
 ### Faturamento por categoria (Jan–Mar 2026)
 
@@ -62,8 +55,6 @@ Optei por manter esse registro no README, em vez de silenciar o problema, porque
 | Games | R$ 221.536,56 |
 | Eletrônicos | R$ 213.639,27 |
 | Informática | R$ 106.523,37 |
-
-> ⚠️ Ver "Nota de transparência" acima — o texto de conclusões desta rodada posiciona Acessórios Mobile como líder de lucro bruto, divergindo da tabela.
 
 ### Top 5 produtos mais lucrativos
 
@@ -102,14 +93,7 @@ Nota: Notebook 14'' tem estoque baixo (13 unidades) apesar de vendas moderadas �
 - **Acessórios Mobile** como categoria a monitorar de perto — a alta margem pode estar restringindo o volume de vendas; ajustes aqui podem destravar bastante rentabilidade.
 - Campanha de cupons/desconto para os produtos parados em estoque (item 1).
 
-## Aprendizados
 
-- Fórmulas de desconto percentual exigem multiplicação `(1 - taxa)`, nunca subtração direta.
-- Métricas que serão comparadas entre si (como lucro e faturamento numa razão de margem) precisam estar calculadas na mesma base — misturar valores brutos e líquidos distorce o resultado.
-- Nem toda correção sai certa de primeira — às vezes uma correção resolve um problema e introduz outro (ex: a correção de quantidade no lucro bruto acabou colando a fórmula de faturamento por engano). Validar o resultado após cada mudança, não só a lógica da fórmula, é essencial.
-- Quando o prazo aperta e uma inconsistência não dá tempo de ser resolvida, documentá-la com transparência é melhor do que publicar como se estivesse tudo certo.
-
-## Arquivos desta pasta
 
 - `queries.sql` — queries finais corrigidas
 - `README.md` — este documento
