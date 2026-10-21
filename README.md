@@ -30,6 +30,7 @@ Este repositório documenta não só os resultados, mas o **processo de raciocí
 
 ## 📁 Estrutura do repositório
 
+```text
 ├── README.md                              ← este arquivo
 ├── /demanda-001-vendas-canal              ← limpeza de dados + faturamento por canal
 │   ├── README.md
@@ -43,7 +44,7 @@ Este repositório documenta não só os resultados, mas o **processo de raciocí
 │   ├── Dashboard_Demanda003.pbix
 │   └── dashboard_print.png
 └── ...
-
+```
 Cada pasta de demanda contém seu próprio README, explicando o contexto do pedido, as decisões de tratamento de dado tomadas, os resultados, os aprendizados e os arquivos técnicos da entrega.
 
 ## 📌 Demandas concluídas
